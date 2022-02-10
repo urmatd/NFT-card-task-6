@@ -1,5 +1,12 @@
 "use strict";
 
+const body = document.body;
+body.style.backgroundColor = "hsl(217, 54%, 11%)";
+body.style.fontFamily = "'Outfit', sans-serif";
+body.style.marginTop = "100px";
+
+// Бэкграун, Основное фото, Заголовок и  абзац
+
 let main = document.getElementById("wrapper");
 main.style.backgroundColor = "hsl(216, 50%, 16%)";
 main.style.width = "300px";
@@ -13,19 +20,22 @@ main.appendChild(mainPhoto);
 
 main.firstChild.style.width = "100%";
 main.firstChild.style.borderRadius = "20px";
-main.firstChild.style.color = "rgba(161, 181, 214, 0.80)";
 
 let h3 = document.createElement("h3");
 h3.innerHTML = "Equilibrium #3429";
 main.appendChild(h3);
-h3.style.color = "rgba(161, 181, 214, 0.80)";
+h3.style.color = "white";
 
 let pOne = document.createElement("p");
 pOne.innerHTML = "Our Equilibrium collection promotes balance and calm.";
 main.appendChild(pOne);
+pOne.style.color = "rgba(161, 181, 214, 0.80)";
+
+// Див и внутри два индикатора, валюта и время
 
 let wrapp = document.createElement("div");
 main.appendChild(wrapp);
+
 wrapp.style.display = "flex";
 wrapp.style.justifyContent = "space-between";
 
@@ -60,19 +70,26 @@ indicateTwo.firstElementChild.style.width = "20px";
 indicateTwo.firstElementChild.style.marginRight = "10px";
 indicateTwo.lastElementChild.style.color = "rgba(161, 181, 214, 0.80)";
 
+// Это разделитель, граница
+
+let border = document.createElement("div");
+main.appendChild(border);
+border.style.borderBottom = "0.1px solid rgba(161, 200, 214, 0.20)";
+border.style.marginBottom = "20px";
+
+// Это аватар автора и его имя
+
 let indicateThree = document.createElement("div");
 main.appendChild(indicateThree);
 let avatar = document.createElement("img");
 avatar.setAttribute("src", "./images/image-avatar.png");
 indicateThree.appendChild(avatar);
-let pFour = document.createElement("p");
-pFour.innerHTML = "John Creation of";
-indicateThree.appendChild(pFour);
+
 let span = document.createElement("span");
-span.innerHTML = "Jules Wyvern";
+span.innerHTML = "Creation of Jules Wyvern";
 indicateThree.appendChild(span);
 
-indicateThree.style.marginTop = "13px";
+span.style.alignItems = "center";
 indicateThree.style.display = "flex";
 indicateThree.style.alignItems = "center";
 indicateThree.firstElementChild.style.width = "30px";
@@ -80,3 +97,5 @@ indicateThree.firstElementChild.style.border = "1.5px solid white";
 indicateThree.firstElementChild.style.borderRadius = "50%";
 indicateThree.lastElementChild.style.color = "rgb(161, 181, 214, 0.80)";
 indicateThree.lastElementChild.style.marginLeft = "20px";
+
+alert("Я оцениваю свою работу на 110 баллов");
